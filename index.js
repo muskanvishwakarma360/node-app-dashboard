@@ -13,10 +13,7 @@ const metrixRouter = require('./Routers/Metrix');
 const app = express();
 const env = require('dotenv').config();
 
-app.use(cors({
-    origin:"http://localhost:3000", 
-    methods: ['GET', "POST", "PUT","DELETE","PATCH"]
-}));
+app.use(cors());
 
 app.use(express.json());
 app.use('/api', leadRouter);
