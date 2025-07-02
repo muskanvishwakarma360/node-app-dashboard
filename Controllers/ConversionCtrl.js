@@ -7,7 +7,7 @@ const createConversion = async (req, res) => {
         res.status(201).json(conversion)
     }
     catch (err) {
-        console.error("conversion created err ", err);
+        console.error("conversion created err ", err.message);
         res.status(500).json({ error: "Failed to create conversion" });
     }
 };

@@ -24,6 +24,4 @@ const EmailCampaignSchema = new mongoose.Schema({
   }
 });
 
-EmailCampaignSchema.index({ campaignId: 1 });
-
 module.exports = mongoose.model("EmailCampaign", EmailCampaignSchema);

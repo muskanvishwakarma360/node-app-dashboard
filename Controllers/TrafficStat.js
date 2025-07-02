@@ -8,7 +8,7 @@ const createTraffic = async (req, res) => {
     }
     catch (err) {
         console.error("traffic created err ", err);
-        res.status(500).json({ error: "Failed to create lead" });
+        res.status(500).json({ error: "Failed to create traffic" });
     }
 };
 

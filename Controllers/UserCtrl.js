@@ -44,5 +44,16 @@ const loginUser = async (req, res) => {
 }
 
 
+const getUser = async (req, res) => {
+    try {
+        const userdata = await User.find()
+        res.status(200).json(userdata)
+    }
+    catch(err) {
+        console.error("traffic get err", err);
+        res.status(500).json({ error: "Failed to find leads" });
+    }
+};
 
-module.exports = { registerUser, loginUser };
+
+module.exports = { registerUser, loginUser, getUser };
